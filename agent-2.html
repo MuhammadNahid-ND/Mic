@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <title></title>
+  <style>
+    body {
+      background: url(images-1.jpeg);
+      background-size: cover;
+      width: 369px;
+    }
+
+    header img {
+      width: 120px;
+      padding: 0 auto;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      display: inline-block;
+      margin: 0 auto;
+      margin-left: 34%;
+      margin-top: -15px;
+    }
+
+    header h4 {
+      color: white;
+      text-align: center;
+      margin-top: -25px;
+      font-family: 'Acme', sans-serif;
+    }
+
+    span {
+      padding: 0 5px;
+    }
+
+    .profile {
+      width: 96%;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      left: 5px;
+      right: 5px;
+      border-radius: 8px;
+      background: url(AgentBack.jpg);
+      background-size: cover;
+      box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+      font-family: 'Righteous', cursive;
+    }
+
+    .profile img {
+      height: 120px;
+      width: 120px;
+      margin: auto auto;
+      justify-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .profile .deta {
+      margin: auto auto;
+    }
+
+    .profile .deta h5 {
+      color: white;
+      font-size: 10pt;
+    }
+
+    .profile .deta h6 {
+      color: white;
+      font-size: 9pt;
+    }
+
+    .mission {
+      font-family: 'Righteous', cursive;
+    }
+
+    .mission h5 {
+      color: #30FFE7;
+      text-align: center;
+      border-bottom: .6px solid #30FFE7;
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 23px;
+      font-size: 14pt;
+    }
+
+    .mission p {
+      color: #30FFE7;
+      font-size: 11pt;
+      text-align: center;
+    }
+
+    .mission .mbtn {
+      background-color: #2BB2A2;
+      color: white;
+      width: 45%;
+      height: 44px;
+      margin: 0 auto;
+      border: none;
+      border-radius: 7px;
+      margin-left: 27%;
+      outline: none;
+      transition: all .6s;
+      font-family: 'Righteous', cursive;
+    }
+
+    .mission .mbtn:hover {
+      border: .5px solid #30FFE7;
+      background: transparent;
+    }
+
+    .hunt {
+      background: url(images-7.jpeg);
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(-100%);
+      transition: all .5s;
+    }
+
+    .open {
+      transform: translateY(00%);
+    }
+
+    .hunt p {
+      text-align: center;
+      font-size: 9pt;
+      color: white;
+      font-family: 'Righteous', cursive;
+    }
+
+    .hunt .sec {
+      border: 1px solid white;
+      display: flex;
+      flex-direction: column;
+      width: 55%;
+      height: 150px;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 7px;
+      background-color: #D4D4D4BF;
+      box-shadow: 4px 4px 2px #D4D4D4 /-4px -4px 2px #D4D4D4;
+
+    }
+
+    .hunt #secret {
+      text-align: center;
+      width: 50%;
+      border: none;
+      color: #2CD8FF;
+      border-bottom: .5px solid #2CD8FF;
+      outline: none;
+      background: transparent;
+      margin: 0 auto;
+      height: 40px;
+      padding-top: 8px;
+      font-family: 'Anton', sans-serif;
+      z-index: 6;
+    }
+
+    .hunt .btt {
+      width: 45%;
+      margin: 0 auto;
+      outline: none;
+      border: none;
+      height: 40px;
+      background-color: #2CD8FF;
+      color: white;
+      border-radius: 8px;
+      margin: 6px auto;
+      transition: all .5s;
+      font-family: 'Acme', sans-serif;
+      z-index: 6;
+    }
+
+    .hunt .btt:hover {
+      background: transparent;
+      border: .6px solid #2CD8FF;
+    }
+
+    .hid {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      margin-top: 50px;
+      position: relative;
+      visibility: hidden;
+      border: none;
+      border-radius: 7px;
+      width: 85%;
+      height: 200px;
+      background: url(AgentBack.jpg);
+      background-size: cover;
+      font-family: 'Righteous', cursive;
+    }
+
+    .hid h5 {
+      color: white;
+      padding: 5px auto;
+      text-align: center;
+      font-size: 11pt;
+      border-bottom: .6px solid white;
+      width: 50%;
+      margin: 10px auto;
+
+    }
+
+    .hid p {
+      text-align: center;
+      color: white;
+      font-size: 9pt;
+      margin: 5px auto;
+    }
+
+    .hid .code {
+      text-align: center;
+      width: 50%;
+      border: none;
+      color: white;
+      border-bottom: .5px solid #00DCB1;
+      outline: none;
+      background: transparent;
+      margin: 0 auto;
+      height: 50px;
+      padding-top: 12px;
+      font-family: 'Anton', sans-serif;
+    }
+
+    .hid .bnn {
+      width: 45%;
+      margin: 0 auto;
+      outline: none;
+      border: none;
+      height: 45px;
+      background-color: #00DCB1;
+      color: white;
+      border-radius: 8px;
+      margin: 10px auto;
+      transition: all .5s;
+      font-family: 'Acme', sans-serif;
+    }
+
+    .hid .bnn:hover {
+      background: transparent;
+      border: .6px solid #2CD8FF;
+    }
+
+    ::placeholder {
+      color: #2CD8FF;
+    }
+
+    .hunt .det img {
+      margin: 0 auto;
+      height: 70px;
+      width: 80px;
+      left: 0px;
+      right: 0px;
+      margin-left: 145px;
+      z-index: 99;
+      transition: all .6s;
+    }
+
+    .hunt .det img:hover {
+      transform: scale(5);
+      z-index: 99;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hunt">
+    <header>
+      <img src="eagle.png" alt="">
+      <h4><span>THE </span>
+        <span>EAGLES</span><span>EYES</span></h4>
+    </header>
+    <div class="det">
+      <img src="map.jpg" alt="">
+      <p>
+        You may see your environment properly . Yu have to keep open your eyes .Read whatever you see . Watch attentively around you . May you have to contact Hazi Rafiq . 
+        </p>
+    </div>
+    <div class="sec">
+      <input type="text" id="secret" placeholder="Secret Code...">
+      <button id="btt" class="btt" onclick="hunt()">CONFIRM</button>
+    </div>
+    <div class="hid" id="hid">
+      <h5>Your Treasure</h5>
+      <p>
+        Your mission is hidden in the middle of two trees which in in the right of the Bottola  Bridge. You have to dig it out and have to return it to Mr.Director .
+      </p>
+      <!--  <input type="text" class="code" id="code" placeholder="CONFIRM THE SECRET">
+     <button class="bnn" id="bnn" onclick="click()">CONFIRM</button>  -->
+    </div>
+  </div>
+  <header>
+    <img src="eagle.png" alt="">
+    <h4><span>THE </span>
+      <span>EAGLES</span><span>EYES</span></h4>
+  </header>
+  <div class="profile">
+    <img src="images -4~2.jpeg" alt="">
+    <div class="deta">
+      <h5>Name : Jack Sparrow</h5>
+      <h6>Height : 5'7”</h6>
+      <h6>Weight : 62 Kg</h6>
+      <h6>Mission Won : 0</h6>
+      <h6>Mission Lost : 0</h6>
+    </div>
+  </div>
+  <div class="mission">
+    <h5>Your Mission</h5>
+    <p>
+      Assalamualaikum , Sparrow ! We have a new mission for you . Our some pen which is a heighter technology was stolen . You and your team have to found it and extract it within 7 days  . Your mission of you accept .
+      </p>
+    <button class="mbtn">Hunt The Secret</button>
+  </div>
+  <script>
+    let Button = document.querySelector('.mbtn');
+    let Hunt = document.querySelector('.hunt');
+    Button.addEventListener('click', function() {
+      Hunt.classList.add('open');
+    });
+    let secode = document.getElementById('secret');
+    let butcode = document.getElementById('btt');
+    let Hid = document.getElementById('hid');
+
+    function hunt() {
+      if (secode = 'Pass') {
+        Hid.style.visibility = 'visible';
+      }
+      else if (secode = 'pass') {
+        Hid.style.visibility = 'visible';
+      }
+      else if (secode = '12345') {
+        Hid.style.visibility = 'visible';
+      }
+      else if (secode = '67890') {
+        Hid.style.visibility = 'visible';
+      }
+      else {
+        alert('Your Mission Failed . Try Again .')
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    body {
+      background: url(images-1.jpeg);
+      background-size: cover;
+      width: 370.6px;
+    }
+
+    header img {
+      width: 120px;
+      padding: 0 auto;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      display: inline-block;
+      margin: 0 auto;
+      margin-left: 34%;
+      margin-top: -15px;
+    }
+
+    header h4 {
+      color: white;
+      text-align: center;
+      margin-top: -25px;
+      font-family: 'Acme', sans-serif;
+    }
+
+    /*   .second {
+      display: flex;
+      flex-direction: column;
+      background: inherit;
+      width: 65%;
+      height: 150px;
+      border: 1px solid #29FFBD;
+      border-radius: 8px;
+      position: absolute;
+      overflow: hidden;
+      top: 50%;
+      left: 17%;
+      transform: translate(-50p%, -50%);
+      background-repeat: none;
+    }
+
+    .second:before {
+      content:"";
+      position: absolute;
+      top: 50%;
+      left: 17%;
+    
+     margin-top: 60%;
+      background: inherit;
+      background-color: black;
+    }
+*/
+
+    .second {
+      width: 65%;
+      height: 150px;
+      top: 56%;
+      left: 17%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0.5px 0.5px 1rem 0 #EEEEEE;
+      border-radius: 5px;
+      position: relative;
+      z-index: 1;
+      background: inherit;
+      overflow: hidden;
+      margin-top: 100px;
+    }
+
+    .second:before {
+      content: "";
+      position: absolute;
+      background: inherit;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+      filter: blur(4px);
+      margin: -20px;
+    }
+
+    ::placeholder {
+      color: #2CD8FF;
+    }
+
+    .second #code {
+      text-align: center;
+      width: 50%;
+      border: none;
+      color: #2CD8FF;
+      border-bottom: .5px solid #2CD8FF;
+      outline: none;
+      background: transparent;
+      margin: 0 auto;
+      height: 50px;
+      padding-top: 12px;
+      font-family: 'Anton', sans-serif;
+    }
+
+    .second .but {
+      width: 45%;
+      margin: 0 auto;
+      outline: none;
+      border: none;
+      height: 45px;
+      background-color: #2CD8FF;
+      color: white;
+      border-radius: 8px;
+      margin: 10px auto;
+      transition: all .5s;
+      font-family: 'Acme', sans-serif;
+
+    }
+
+    span {
+      padding: 0 5px;
+    }
+
+    .second .but:hover {
+      background: transparent;
+      border: .6px solid #2CD8FF;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="eagle.png" alt="">
+    <h4><span>THE </span>
+      <span>EAGLES</span><span>EYES</span></h4>
+  </header>
+  <div class="first">
+    <div class="second">
+      <input type="password" name="code" id="code" value="" placeholder="Agent Passcode" />
+      <button class="but" id="but" onclick="codebox()">CONFIRM</button>
+    </div>
+  </div>
+  <script>
+    function codebox() {
+      let passcode = document.getElementById("code").value;
+      if (passcode == "sar56n") {
+        location.replace('finger-1.html');
+      }
+      else if (passcode == "dro69s") {
+        location.replace('finger-2.html');
+      }
+      else if (passcode =="pass"){
+        location.replace('finger.html');
+      }
+      else {
+        alert('You are aborted');
+      }
+    }
+  </script>
+</body>
+
+</html>
